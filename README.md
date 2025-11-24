@@ -1,3 +1,3 @@
 # GDDS.ren
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/FruitJelliesGD/GDDS.ren)
+果冻大神的网站
