@@ -2,34 +2,119 @@ import { defineConfig } from 'vitepress';
 
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
+  lastUpdated: true,
+  
+  head: [
+    ['link', { rel: 'icon', href: '/pictures/icon.ico' }],
+  ],
+
   lang: 'zh-CN',
-  title: '果冻大神',
+
+  title: 'gdds.ren',
+
   description: '果冻大神的领域',
 
   themeConfig: {
+    
+    notFound: {
+      title: '这也妹有网页啊',
+      quote: '你这是干哪来了',
+      linkText: '回去吧',
+    },
+
+    lastUpdated: {
+      text: '最后更新',
+    },
+
+    //文章页脚
+    docFooter: {
+      prev: '上一页',
+      next: '下一页',
+    },
+
+    //深浅切换按钮
+    darkModeSwitchTitle: '切换到深色模式',
+    lightModeSwitchTitle: '切换到浅色模式',
+
+    //移动端文章顶部导航栏
+    returnToTopLabel: '返回顶部',
+
+    logo: '/pictures/icon.ico',
+
+      // 站点地图
+    sitemap: {
+      hostname: 'https://gdds.ren',
+    },
+
+  //导航栏
     nav: [
       { text: 'Example', link: '/example' },
 
       {
-        text: 'Dropdown Menu',
+        text: '攻略（内含剧透）',
         items: [
-          { text: 'Item A', link: '/item-1' },
-          { text: 'Item B', link: '/item-2' },
-          { text: 'Item C', link: '/item-3' },
+          { text: '守望大冒险', link: '/swdmxdemo' },
+          { text: '恋与守望', link: '/lyswgl' },
         ],
       },
 
-      //...
     ],
 
+    //侧边栏
     sidebar: [
       {
-        text: 'Guide',
+        text: '游戏攻略',
         items: [
-          { text: 'Example', link: '/example' },
-          // ...
+          { text: '守望大冒险', link: '/swdmxdemo' },
+          { text: '恋与守望', link: '/lyswgl' },
         ],
       },
     ],
+
+    //页面导航
+    outline: {
+      level: [2, 3, 4],  // 展示 h2/h3/h4
+      label: '本页导航',  // 导航标题（默认是 "On this page"）
+    },
+
+    //页脚
+    footer: {
+      message: '<a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2025067927号-1</a>',
+      copyright: `版权所有 © 2024-${new Date().getFullYear()} 果冻大神`,
+    },
+
+    //本地搜索
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: {
+            buttonText: '搜索',
+          },
+          modal: {
+            displayDetails: '显示详细列表',
+            resetButtonTitle: '重置搜索',
+            backButtonTitle: '关闭搜索',
+            noResultsText: '未找到结果：',
+
+            footer: {
+              selectText: '选择',
+              selectKeyAriaLabel: '回车',
+              navigateText: '导航',
+              navigateUpKeyAriaLabel: '上箭头',
+              navigateDownKeyAriaLabel: '下箭头',
+              closeText: '关闭',
+              closeKeyAriaLabel: 'Esc',
+            }
+          }
+        }
+      }
+    },
+
+    //编辑文章
+    editLink: {
+      pattern: 'https://github.com/FruitJelliesGD/GDDS.ren/tree/main/docs/:path',
+      text: '编辑此页',
+    },
   },
 });
