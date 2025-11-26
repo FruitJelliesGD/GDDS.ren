@@ -51,16 +51,16 @@ export default defineConfig({
       {
         text: '攻略（内含剧透）',
         items: [
-          { text: '守望大冒险', link: '/gameGuide/swdmxdemo/' },
-          { text: '恋与守望', link: '/gameGuide/lyswgl/' },
+          { text: '守望大冒险', link: '/gameGuide/swdmxdemo' },
+          { text: '恋与守望', link: '/gameGuide/lyswgl' },
         ],
       },
 
       {
         text: '直播相关工具',
         items: [
-          { text: '在直播间装监控', link: '/liveTools/blap/' },
-          { text: 'B站一键分享', link: '/liveTools/bsb/' },
+          { text: '在直播间装监控', link: '/liveTools/blap' },
+          { text: 'B站一键分享', link: '/liveTools/bsb' },
         ],
       },
 
@@ -72,8 +72,8 @@ export default defineConfig({
         {
           text: '游戏攻略',
           items: [
-            { text: '守望大冒险', link: '/gameGuide/swdmxdemo/' },
-            { text: '恋与守望', link: '/gameGuide/lyswgl/' },
+            { text: '守望大冒险', link: '/gameGuide/swdmxdemo' },
+            { text: '恋与守望', link: '/gameGuide/lyswgl' },
           ],
         },
       ],
@@ -82,8 +82,8 @@ export default defineConfig({
         {
           text: '直播工具',
           items: [
-            { text: '在直播间装监控', link: '/liveTools/blap/' },
-            { text: 'B站一键分享', link: '/liveTools/bsb/' },
+            { text: '在直播间装监控', link: '/liveTools/blap' },
+            { text: 'B站一键分享', link: '/liveTools/bsb' },
           ],
         },
       ],
