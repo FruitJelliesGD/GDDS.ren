@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress';
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
   lastUpdated: true,
-  
+
   head: [
     ['link', { rel: 'icon', href: '/pictures/icon.ico' }],
   ],
@@ -15,7 +15,7 @@ export default defineConfig({
   description: '果冻大神的领域',
 
   themeConfig: {
-    
+
     notFound: {
       title: '这也妹有网页啊',
       quote: '你这是干哪来了',
@@ -41,35 +41,56 @@ export default defineConfig({
 
     logo: '/pictures/icon.ico',
 
-      // 站点地图
+    // 站点地图
     sitemap: {
       hostname: 'https://gdds.ren',
     },
 
-  //导航栏
+    //导航栏
     nav: [
-      { text: 'Example', link: '/example' },
+      { text: 'A梦直播间', link: 'https://live.bilibili.com/12101556' },
 
       {
         text: '攻略（内含剧透）',
         items: [
-          { text: '守望大冒险', link: '/swdmxdemo' },
-          { text: '恋与守望', link: '/lyswgl' },
+          { text: '守望大冒险', link: '/gameGuide/swdmxdemo/' },
+          { text: '恋与守望', link: '/gameGuide/lyswgl/' },
+        ],
+      },
+
+      {
+        text: '直播相关工具',
+        items: [
+          { text: '在直播间装监控', link: '/liveTools/blap/' },
+          { text: 'B站一键分享', link: '/liveTools/bsb/' },
         ],
       },
 
     ],
 
     //侧边栏
-    sidebar: [
-      {
-        text: '游戏攻略',
-        items: [
-          { text: '守望大冒险', link: '/swdmxdemo' },
-          { text: '恋与守望', link: '/lyswgl' },
-        ],
-      },
-    ],
+    sidebar: {
+      '/gameGuide/': [
+        {
+          text: '游戏攻略',
+          items: [
+            { text: '守望大冒险', link: '/gameGuide/swdmxdemo/' },
+            { text: '恋与守望', link: '/gameGuide/lyswgl/' },
+          ],
+        },
+      ],
+
+      '/liveTools/': [
+        {
+          text: '直播工具',
+          items: [
+            { text: '在直播间装监控', link: '/liveTools/blap/' },
+            { text: 'B站一键分享', link: '/liveTools/bsb/' },
+          ],
+        },
+      ],
+
+    },
 
     //页面导航
     outline: {

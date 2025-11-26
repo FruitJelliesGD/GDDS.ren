@@ -13,7 +13,11 @@ export default {
 
   Layout: layout,
 
-  enhanceApp({app , router }) {
+  markdown: {
+    lineNumbers: true
+  },
+
+  enhanceApp({ app, router }) {
     // 彩虹背景动画样式
     if (typeof window !== 'undefined') {
       watch(
@@ -23,7 +27,7 @@ export default {
       )
     }
 
-    },
+  },
 
 }
 
