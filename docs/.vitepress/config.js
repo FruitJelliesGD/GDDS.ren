@@ -3,7 +3,6 @@ import { defineConfig } from 'vitepress';
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
   lastUpdated: true,
-
   head: [
     ['link', { rel: 'icon', href: '/pictures/icon.ico' }],
   ],
@@ -15,7 +14,6 @@ export default defineConfig({
   description: '果冻大神的领域',
 
   themeConfig: {
-
     notFound: {
       title: '这也妹有网页啊',
       quote: '你这是干哪来了',
