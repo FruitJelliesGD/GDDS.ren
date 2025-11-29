@@ -120,3 +120,15 @@ img {
   transition: transform 0.2s;
   transform: scale(1.03, 1.03);
 }
+
+.custom-block.danger a,
+.custom-block.danger code {
+  color: var(--vp-c-brand-1);
+  --vp-c-danger-2: var(--vp-c-brand-1);
+}
+
+.dark .custom-block.danger a,
+.custom-block.danger code {
+    color: var(--vp-c-brand-1);
+  --vp-c-danger-2: var(--vp-c-brand-3);
+}

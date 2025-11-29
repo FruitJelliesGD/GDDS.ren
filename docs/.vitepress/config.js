@@ -2,6 +2,26 @@ import { defineConfig } from 'vitepress';
 
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
+
+  transformHead({ assets }) {
+    // 相应地调整正则表达式以匹配字体
+    const myFontFile = assets.find(file => /OPPO Sans 4.0.ttf/.test(file))
+    if (myFontFile) {
+      return [
+        [
+          'link',
+          {
+            rel: 'preload',
+            href: myFontFile,
+            as: 'font',
+            type: 'font/ttf',
+            crossorigin: ''
+          },
+        ]
+      ]
+    }
+  },
+
   lastUpdated: true,
   cleanUrls: true,
   head: [
@@ -104,7 +124,7 @@ export default defineConfig({
     //页脚
     footer: {
       message: '<a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2025067927号-1</a>',
-      copyright: `版权所有 © 2024-${new Date().getFullYear()} 果冻大神`,
+      copyright: `© 2024-${new Date().getFullYear()} 果冻大神 版权所有`,
     },
 
     //本地搜索

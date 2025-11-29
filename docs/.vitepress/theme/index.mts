@@ -1,9 +1,10 @@
 /* .vitepress/theme/index.ts */
-import DefaultTheme from 'vitepress/theme'
+import DefaultTheme from 'vitepress/theme-without-fonts'
 import './style/index.css'
 import { watch } from 'vue'
 import './style/dark.css'
 import layout from './style/layout.vue'
+import './style/fonts.css'
 
 // 彩虹背景动画样式
 let homePageStyle: HTMLStyleElement | undefined
