@@ -3,7 +3,7 @@
     cursor: url('./.vitepress/public/OverwatchPointer/pointer.cur') 6 5, auto !important;
 }
 
-/* 超链接（点击） */
+/* 超链接（点击） 
 a,
 button,
 [role="button"],
@@ -11,34 +11,34 @@ button,
     cursor: url('/.vitepress/public/OverwatchPointer/pointer.cur') 6 5, pointer !important;
 }
 
-/* 输入框、textarea */
+/* 输入框、textarea 
 input,
 textarea {
     cursor: url('/.vitepress/public/OverwatchPointer/text.cur') 16 24, text !important;
 }
 
-/* 移动/拖动 */
+/* 移动/拖动 
 .draggable,
 .sortable {
     cursor: url('/.vitepress/public/OverwatchPointer/move.cur') 32 32, move !important;
 }
 
-/* 水平调整大小 */
+/* 水平调整大小 
 .resizable-x {
     cursor: url('/.vitepress/public/OverwatchPointer/horz.cur') 32 32, ew-resize !important;
 }
 
-/* 垂直调整大小 */
+/* 垂直调整大小 
 .resizable-y {
     cursor: url('/.vitepress/public/OverwatchPointer/vert.cur') 32 32, ns-resize !important;
 }
 
-/* 十字准星 */
+/* 十字准星 
 .crosshair {
     cursor: url('/.vitepress/public/OverwatchPointer/cross.cur') 23 23, crosshair !important;
 }
 
-/* 工作中（加载） */
+/* 工作中（加载） 
 .loading,
 .busy,
 .waiting,
@@ -46,35 +46,35 @@ textarea {
     cursor: url('/.vitepress/public/OverwatchPointer/busy.ani') 28 28, wait !important;
 }
 
-/* 帮助提示 */
+/* 帮助提示 
 .help,
 [aria-label="help"] {
     cursor: url('/.vitepress/public/OverwatchPointer/help.cur') 6 5, help !important;
 }
 
-/* 手写/签名 */
+/* 手写/签名 
 .handwriting {
     cursor: url('/.vitepress/public/OverwatchPointer/handwriting.cur') 4 4, default !important;
 }
 
-/* 人形选择（可选） */
+/* 人形选择（可选） 
 .person {
     cursor: url('/.vitepress/public/OverwatchPointer/person.cur') 19 4, default !important;
 }
 
-/* 拾取/固定 */
+/* 拾取/固定 
 .pin {
     cursor: url('/.vitepress/public/OverwatchPointer/pin.cur') 19 4, default !important;
 }
 
-/* 授权失败/不可用 */
+/* 授权失败/不可用 
 .disabled,
 .unavailable,
 [disabled] {
     cursor: url('/.vitepress/public/OverwatchPointer/unavailiable.cur') 19 24, not-allowed !important;
 }
 
-/* 拖动方向 dgn1 / dgn2（对角方向缩放等） */
+/* 拖动方向 dgn1 / dgn2（对角方向缩放等） 
 .resize-ne-sw {
     cursor: url('/.vitepress/public/OverwatchPointer/dgn1.cur') 32 32, nesw-resize !important;
 }
@@ -83,7 +83,7 @@ textarea {
     cursor: url('/.vitepress/public/OverwatchPointer/dgn2.cur') 32 32, nwse-resize !important;
 }
 
-/* 备用指针 */
+/* 备用指针 
 .alternate {
     cursor: url('/.vitepress/public/OverwatchPointer/alternate.cur') 18 4, pointer !important;
 }
