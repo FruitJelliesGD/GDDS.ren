@@ -3,11 +3,12 @@ import { defineConfig } from 'vitepress';
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
   lastUpdated: true,
+  cleanUrls: true,
   head: [
     ['link', { rel: 'icon', href: '/pictures/icon.ico' }],
   ],
 
-  lang: 'zh-CN',
+  lang: 'zh-Hans',
 
   title: 'gdds.ren',
 
@@ -33,6 +34,8 @@ export default defineConfig({
     //深浅切换按钮
     darkModeSwitchTitle: '切换到深色模式',
     lightModeSwitchTitle: '切换到浅色模式',
+
+    darkModeSwitchLabel: '深浅模式切换',
 
     //移动端文章顶部导航栏
     returnToTopLabel: '返回顶部',
@@ -90,6 +93,8 @@ export default defineConfig({
 
     },
 
+    sidebarMenuLabel: '目录',
+
     //页面导航
     outline: {
       level: [2, 3, 4],  // 展示 h2/h3/h4
@@ -135,5 +140,7 @@ export default defineConfig({
       pattern: 'https://github.com/FruitJelliesGD/GDDS.ren/tree/main/docs/:path',
       text: '编辑此页',
     },
+
+    externalLinkIcon: true,
   },
 });

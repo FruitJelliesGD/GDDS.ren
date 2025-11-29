@@ -1,10 +1,3 @@
-<style>
-/* 只针对本页面内的所有图片 */
-img {
-  border-radius: 12px;
-}
-
-</style>
 # 《恋与守望》攻略
 ##### <Badge type="tip" text="发行版" />
 

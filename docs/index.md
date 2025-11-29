@@ -46,7 +46,7 @@ features:
 
 ## 守望大冒险
 
-基于 `守望先锋` 背景开发的一款同人 RPG 游戏
+基于 `守望先锋` 游戏背景开发的一款同人 RPG 游戏
 
 ::: danger 预计春节正式发布  
 丁蒙涵一生中遇到的男人构成了风花雪月四个字  
@@ -59,7 +59,7 @@ features:
 
 ## 恋与守望
 
-基于 `守望先锋` 背景开发的，以Ameng为主角的一款同人嘎啦给木
+基于 `守望先锋` 游戏背景开发的、以Ameng为主角的一款同人嘎啦给木
 
 ::: danger 游玩录播
 Kaneki：[玩恋与守望自己的所有结局](https://www.bilibili.com/video/BV1dwb8zeE4G/)  
@@ -97,11 +97,3 @@ const members = [
 不重要
 
 <VPTeamMembers size="medium" :members="members" />
-
-<style>
-/* 只针对本页面内的所有图片 */
-img {
-  border-radius: 12px;
-}
-
-</style>

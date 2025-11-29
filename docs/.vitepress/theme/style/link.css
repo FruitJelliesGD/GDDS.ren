@@ -3,7 +3,7 @@
     content: "";
     mask: url("https://api.iconify.design/simple-icons/bilibili.svg");
     mask-size: contain;
-    background-color: #FF6699;
+    background-color: var(--vp-c-brand-2);
 }
 
 /* 通用样式 */
