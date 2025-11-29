@@ -1,4 +1,4 @@
 /* 默认光标 */
 * {
-    cursor: url('./.vitepress/public/OverwatchPointer/pointer.cur') 6 5, auto !important;
+    cursor: url('/.vitepress/public/OverwatchPointer/pointer.cur') 6 5, auto !important;
 }
