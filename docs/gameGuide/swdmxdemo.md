@@ -1,7 +1,7 @@
 # 《守望大冒险》攻略
 ##### <Badge type="warning" text="Demo" />
 
-![LOGO](/pictures/swdmx.webp)
+![LOGO](/pictures/swdmx1.webp)
 
 ## 萌晗镇
 

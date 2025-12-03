@@ -57,8 +57,6 @@ export default defineConfig({
 
     darkModeSwitchLabel: '深浅模式切换',
 
-    returnToTopLabel: '返回顶部',
-
     //移动端文章顶部导航栏
     returnToTopLabel: '返回顶部',
 
