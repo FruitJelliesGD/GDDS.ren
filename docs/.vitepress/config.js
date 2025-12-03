@@ -35,8 +35,6 @@ export default defineConfig({
   description: '果冻大神的领域',
 
   themeConfig: {
-    logo: '/pictures/icon.ico',
-
     notFound: {
       title: '这也妹有网页啊',
       quote: '你这是干哪来了',
