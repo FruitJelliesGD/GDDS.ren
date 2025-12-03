@@ -85,6 +85,7 @@ const members = [
       { icon: 'steam', link: 'https://steamcommunity.com/id/fruitjellies/' },
       { icon: 'qq', link:'https://qm.qq.com/q/2ERBjrDPfe'},
       { icon: 'bambulab', link: 'https://makerworld.com.cn/zh/@fruitjellies' },
+      { icon: 'battledotnet', link: '/battlenet' },
     ],
     sponsor: 'https://afdian.com/a/fruitjellies',
     actionText: '赞助我',

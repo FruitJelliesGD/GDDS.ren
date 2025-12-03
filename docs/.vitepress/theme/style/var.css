@@ -129,6 +129,10 @@ img {
 
 .dark .custom-block.danger a,
 .custom-block.danger code {
-    color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
   --vp-c-danger-2: var(--vp-c-brand-3);
+}
+
+.VPButton.brand {
+  border-width: 2px;
 }

@@ -35,6 +35,8 @@ export default defineConfig({
   description: '果冻大神的领域',
 
   themeConfig: {
+    logo: '/pictures/icon.ico',
+
     notFound: {
       title: '这也妹有网页啊',
       quote: '你这是干哪来了',
@@ -56,6 +58,8 @@ export default defineConfig({
     lightModeSwitchTitle: '切换到浅色模式',
 
     darkModeSwitchLabel: '深浅模式切换',
+
+    returnToTopLabel: '返回顶部',
 
     //移动端文章顶部导航栏
     returnToTopLabel: '返回顶部',
@@ -124,7 +128,7 @@ export default defineConfig({
     //页脚
     footer: {
       message: '<a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2025067927号-1</a>',
-      copyright: `© 2024-${new Date().getFullYear()} 果冻大神 版权所有`,
+      copyright: `© 2024-${new Date().getFullYear()} <a href="https://space.bilibili.com/5871349">果冻大神</a> 版权所有`,
     },
 
     //本地搜索
@@ -162,5 +166,11 @@ export default defineConfig({
     },
 
     externalLinkIcon: true,
+
+    markdown: {
+      codeCopyButtonTitle: '复制',
+    },
+
+    appearance: true,
   },
 });
