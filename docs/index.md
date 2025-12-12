@@ -25,23 +25,41 @@ hero:
 
 features:
   - icon: 🤓
-    title: 蒙涵
-    details: 银质子弹！
-  - icon: 🍸️
-    title: 冷撒
-    details: 再来一杯！
+    link: https://space.bilibili.com/25470223
+    linkText: 查看B站主页
+    title: Ameng
+    details: 原型为丁蒙涵 B站ID：ameng梦梦梦 <br>
+     一只从小在萌晗镇长大的鼠人，生来就长有鼠耳朵和尾巴。他和一名叫Kyo的年轻老头同居，并经常发表一些智力低下的言论。常常称自己为老坦，实际上战斗能力并不强。
   - icon: 👵
-    title: K神
-    details: 消除记忆！
-  - icon: 🦍
-    title: 孤雪
-    details: 蒙涵跪下！
+    link: https://space.bilibili.com/26179136
+    linkText: 查看B站主页
+    title: Kyo
+    details: 原型为孔春亭 B站ID：Kyo_ow <br>
+     一个年轻的老头，看起来男女老少的。视财如命，为了骗舰长不惜卖白袜。爱财是他最大的特点，经常对Ameng的智障言论发表犀利看法。是一位输出能力一般的枪辅。
   - icon: 🐯
-    title: 金木
-    details: 牛的蒙子！
+    link: https://space.bilibili.com/51927792
+    linkText: 查看B站主页
+    title: Jinmu
+    details: 原型为易虎 B站ID：ROC-Jinmu <br>
+     长相酷似藏狐的好脾气自由人，经常容忍包容Ameng的智障言论，两人的感情像青梅竹马一样。拥有出色的战斗能力，可以以一己之力带Ameng打赢大部分战斗。
+  - icon: 🦍
+    link: https://space.bilibili.com/13854759
+    linkText: 查看B站主页
+    title: Guxue
+    details: 原型为徐秋林 B站ID：OA-Guxue8 <br>
+     长相清秀，脸型流畅的粉发狗耳娘，OA发生了赛前老坦跑跑事件后被请来救场，比赛结束后可以成为队友。喜欢和Ameng打情骂俏，有较全面的输出以及辅助能力。
   - icon: 💣
-    title: 刘念
-    details: 爸爸级别！
+    link: https://space.bilibili.com/37434159
+    linkText: 查看B站主页
+    title: Kaneki
+    details: 原型为刘念 B站ID：Kanekiツ <br>
+     神秘白发忧郁男子，经常念叨自己精神上的问题，黑眼圈很严重，看起来人也虚虚的。被Ameng一行人从海岛拯救后可以成为队友。不知道为什么身为自由人却有长枪技能。
+  - icon: 🍸️
+    link: https://space.bilibili.com/168834692
+    linkText: 查看B站主页
+    title: Lengsa
+    details: 原型为陈靖逸 B站ID：ROC-Lengsa <br>
+     和一名叫何诚智的男子同居，并且否认两人之间有超越友情的禁忌关系。平时最喜欢的就是喝点小酒enjoy一下。被Ameng一行人骗着一起上路了。拥有出色的辅助能力。
 ---
 
 ## 守望大冒险
@@ -56,6 +74,17 @@ features:
 易虎   是高悬云端温柔陪伴的月  
 银质子弹 是四个字  
 :::
+
+### 地图介绍
+#### 萌晗镇
+新手村一样的地点，风格淳朴土萌，轻松愉快。这里是最重要的几位主角的居住地。故事就发生在这个朴实无华的小镇上。
+#### 皇心镇
+以举办大量顶尖的职业比赛闻名于守望大陆，大量顶尖职业选手的居住地。后来有钱后更改了小镇的装修风格，变成了欧式复古小镇，并建造了华丽的皇心城堡供全部职业选手居住。作为小镇来说非常有钱，但镇长似乎有一些不可告人的秘密。
+#### 国王大道城
+因某种魔法结界而永远处于天黑的状态，是一座看似繁荣实则衰败的赛博朋克风的大城市，在这里的潮流是将皮肤染成各种颜色。《恋与守望》的取景地守望中专就坐落于此。在这里有许多关于守望先锋的展览、讲座、活动，大部分守望先锋从业人员都居住在这里。
+#### 里阿尔托城
+城市中有许多河流，是河水、鲜花、时尚与美术之城。这里有着每年祭祀河神的传统，但在这个祭祀活动背后有着恐怖的真相……
+
 
 ## 恋与守望
 
