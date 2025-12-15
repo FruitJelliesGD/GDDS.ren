@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 游玩守望大冒险
-      link: /OverwatchAdventure/
+      link: https://gdds.ren/OverwatchAdventure/
     - theme: alt
       text: B站主页
       link: https://space.bilibili.com/5871349
