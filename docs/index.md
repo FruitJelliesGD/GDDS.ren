@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 游玩守望大冒险
-      link: https://overwatchadventure.pages.dev/
+      link: /OverwatchAdventure/
     - theme: alt
       text: B站主页
       link: https://space.bilibili.com/5871349
@@ -28,37 +28,37 @@ features:
     link: https://space.bilibili.com/25470223
     linkText: 查看B站主页
     title: Ameng
-    details: 原型为丁蒙涵 B站ID：ameng梦梦梦 <br>
+    details: 原型为 <b>丁蒙涵</b>，B站ID：<b>ameng梦梦梦</b> <br>
      一只从小在萌晗镇长大的鼠人，生来就长有鼠耳朵和尾巴。他和一名叫Kyo的年轻老头同居，并经常发表一些智力低下的言论。常常称自己为老坦，实际上战斗能力并不强。
   - icon: 👵
     link: https://space.bilibili.com/26179136
     linkText: 查看B站主页
     title: Kyo
-    details: 原型为孔春亭 B站ID：Kyo_ow <br>
+    details: 原型为 <b>孔春亭</b>，B站ID：<b>Kyo_ow</b> <br>
      一个年轻的老头，看起来男女老少的。视财如命，为了骗舰长不惜卖白袜。爱财是他最大的特点，经常对Ameng的智障言论发表犀利看法。是一位输出能力一般的枪辅。
   - icon: 🐯
     link: https://space.bilibili.com/51927792
     linkText: 查看B站主页
     title: Jinmu
-    details: 原型为易虎 B站ID：ROC-Jinmu <br>
+    details: 原型为 <b>易虎</b>，B站ID：<b>ROC-Jinmu</b> <br>
      长相酷似藏狐的好脾气自由人，经常容忍包容Ameng的智障言论，两人的感情像青梅竹马一样。拥有出色的战斗能力，可以以一己之力带Ameng打赢大部分战斗。
   - icon: 🦍
     link: https://space.bilibili.com/13854759
     linkText: 查看B站主页
     title: Guxue
-    details: 原型为徐秋林 B站ID：OA-Guxue8 <br>
+    details: 原型为 <b>徐秋林</b>，B站ID：<b>OA-Guxue8</b> <br>
      长相清秀，脸型流畅的粉发狗耳娘，OA发生了赛前老坦跑跑事件后被请来救场，比赛结束后可以成为队友。喜欢和Ameng打情骂俏，有较全面的输出以及辅助能力。
   - icon: 💣
     link: https://space.bilibili.com/37434159
     linkText: 查看B站主页
     title: Kaneki
-    details: 原型为刘念 B站ID：Kanekiツ <br>
+    details: 原型为 <b>刘念</b>，B站ID：<b>Kanekiツ</b> <br>
      神秘白发忧郁男子，经常念叨自己精神上的问题，黑眼圈很严重，看起来人也虚虚的。被Ameng一行人从海岛拯救后可以成为队友。不知道为什么身为自由人却有长枪技能。
   - icon: 🍸️
     link: https://space.bilibili.com/168834692
     linkText: 查看B站主页
     title: Lengsa
-    details: 原型为陈靖逸 B站ID：ROC-Lengsa <br>
+    details: 原型为 <b>陈靖逸</b>，B站ID：<b>ROC-Lengsa</b> <br>
      和一名叫何诚智的男子同居，并且否认两人之间有超越友情的禁忌关系。平时最喜欢的就是喝点小酒enjoy一下。被Ameng一行人骗着一起上路了。拥有出色的辅助能力。
 ---
 
@@ -114,7 +114,7 @@ const members = [
       { icon: 'steam', link: 'https://steamcommunity.com/id/fruitjellies/' },
       { icon: 'qq', link:'https://qm.qq.com/q/2ERBjrDPfe'},
       { icon: 'bambulab', link: 'https://makerworld.com.cn/zh/@fruitjellies' },
-      { icon: 'battledotnet', link: '/battlenet' },
+      { icon: 'battledotnet', link: '/links/battlenet' },
     ],
     sponsor: 'https://afdian.com/a/fruitjellies',
     actionText: '赞助我',
