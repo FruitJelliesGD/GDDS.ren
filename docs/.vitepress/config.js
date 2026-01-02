@@ -34,6 +34,13 @@ export default defineConfig({
 
   description: '果冻大神的领域',
 
+  markdown: {
+    codeCopyButtonTitle: '点击复制',
+    image: {
+      lazyLoading: true,
+    },
+  },
+
   themeConfig: {
     notFound: {
       title: '这也妹有网页啊',
@@ -82,7 +89,7 @@ export default defineConfig({
       {
         text: '恋与守望',
         items: [
-          { text: '攻略（内含剧透）', link: '/LoveAndOverwatch/Guide' },
+          { text: '攻略（内含剧透）', link: '/LoveAndOverwatch/Guide' },                   
         ],
       },
 
@@ -178,10 +185,6 @@ export default defineConfig({
     },
 
     externalLinkIcon: true,
-
-    markdown: {
-      codeCopyButtonTitle: '复制',
-    },
 
     appearance: true,
   },
