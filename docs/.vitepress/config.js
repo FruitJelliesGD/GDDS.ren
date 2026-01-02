@@ -241,7 +241,7 @@ export default defineConfig({
         text: '守望大冒险',
         items: [
           { text: 'Demo版攻略', link: '/OverwatchAdventure/DemoGuide' },
-          { text: '技能说明', link: '/OverwatchAdventure/Ability' },
+          { text: '战斗相关', link: '/OverwatchAdventure/Battle' },
         ],
       },
 
@@ -269,7 +269,7 @@ export default defineConfig({
           text: '守望大冒险',
           items: [
             { text: 'Demo版攻略', link: '/OverwatchAdventure/DemoGuide' },
-            { text: '技能说明', link: '/OverwatchAdventure/Ability' },
+            { text: '战斗相关', link: '/OverwatchAdventure/Battle' },
           ],
         },
       ],

@@ -40,7 +40,7 @@ features:
     link: https://space.bilibili.com/51927792
     linkText: Check out on bilibili
     title: Jinmu
-    details: The character is based on <b>Yi Hu</b>, whose Bilibili ID is <b>ROC-Jinmu</b>.<br><br>
+    details: The character is based on <b>Yi Hu</b>, whose Bilibili ID is <b>狗群主金木丶</b>.<br><br>
      A good-natured, free-spirited individual who bears a striking resemblance to a Tibetan fox, he often tolerates and forgives Ameng's idiotic remarks; their relationship is like that of childhood sweethearts. He possesses outstanding combat abilities and can single-handedly lead Ameng to victory in most battles.
   - icon: 🦍
     link: https://space.bilibili.com/13854759
