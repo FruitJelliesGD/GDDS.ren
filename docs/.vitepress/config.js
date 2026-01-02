@@ -3,6 +3,166 @@ import { defineConfig } from 'vitepress';
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
 
+  locales: {
+    root: {
+      label: '简体中文',
+      lang: 'zh-Hans',
+      link: '/',
+    },
+    en: {
+      label: 'English',
+      lang: 'en-US', // 可选，将作为 `lang` 属性添加到 `html` 标签中
+      titleTemplate: 'FruitJellies',
+      themeConfig: {
+        notFound: {
+          title: "Grats, you broke it.",
+          quote: "Where did it go?",
+          linkText: 'Respawn',
+        },
+    
+        lastUpdated: {
+          text: 'Last updated',
+        },
+    
+        //文章页脚
+        docFooter: {
+          prev: 'Previous Page',
+          next: 'Next page',
+        },
+    
+        //深浅切换按钮
+        darkModeSwitchTitle: 'Switch to Dark Mode',
+        lightModeSwitchTitle: 'Switch to Light Mode',
+    
+        darkModeSwitchLabel: 'Dark Mode Switch',
+    
+        //移动端文章顶部导航栏
+        returnToTopLabel: 'Return to top',
+    
+        logo: '/pictures/icon.ico',
+    
+        // 站点地图
+        sitemap: {
+          hostname: 'https://gdds.ren',
+        },
+    
+        //导航栏
+        nav: [
+          { text: "Ameng's Live Streaming Room", link: 'https://live.bilibili.com/12101556' },
+    
+          {
+            text: 'Overwatch: Adventure',
+            items: [
+              { text: 'Demo版攻略', link: '/en/OverwatchAdventure/DemoGuide' },
+              { text: '技能说明', link: '/en/OverwatchAdventure/Ability' },
+            ],
+          },
+    
+          {
+            text: 'Love and Overwatch',
+            items: [
+              { text: '攻略（内含剧透）', link: '/LoveAndOverwatch/Guide' },
+            ],
+          },
+    
+          {
+            text: 'Live Tools',
+            items: [
+              { text: '在直播间装监控', link: '/liveTools/blap' },
+              { text: 'B站一键分享', link: '/liveTools/bsb' },
+            ],
+          },
+    
+        ],
+    
+        //侧边栏
+        sidebar: {
+          '/OverwatchAdventure/': [
+            {
+              text: 'Overwatch: Adventure',
+              items: [
+                { text: 'Demo版攻略', link: '/en/OverwatchAdventure/DemoGuide' },
+                { text: '技能说明', link: '/en/OverwatchAdventure/Ability' },
+              ],
+            },
+          ],
+    
+          '/LoveAndOverwatch/': [
+            {
+              text: 'Love And Overwatch',
+              items: [
+                { text: '游戏攻略', link: '/LoveAndOverwatch/Guide' },
+              ],
+            },
+          ],
+    
+          '/liveTools/': [
+            {
+              text: 'Live Tools',
+              items: [
+                { text: '在直播间装监控', link: '/en/liveTools/blap' },
+                { text: 'B站一键分享', link: '/en/liveTools/bsb' },
+              ],
+            },
+          ],
+    
+        },
+    
+        sidebarMenuLabel: '目录',
+    
+        //页面导航
+        outline: {
+          level: [2, 3, 4],  // 展示 h2/h3/h4
+          label: 'On this page',  // 导航标题（默认是 "On this page"）
+        },
+    
+        //页脚
+        footer: {
+          message: '<a href="https://beian.miit.gov.cn/" target="_blank">Liao ICP Filing No. 2025067927-1</a>',
+          copyright: `© 2024-${new Date().getFullYear()} <a href="https://space.bilibili.com/5871349">FruitJellies</a> CopyRight`,
+        },
+    
+        //本地搜索
+        search: {
+          provider: 'local',
+          options: {
+            translations: {
+              button: {
+                buttonText: 'Search',
+              },
+              modal: {
+                displayDetails: '显示详细列表',
+                resetButtonTitle: 'Reset',
+                backButtonTitle: 'Close',
+                noResultsText: '未找到结果：',
+    
+                footer: {
+                  selectText: 'Choose',
+                  selectKeyAriaLabel: 'Enter',
+                  navigateText: 'Navigate',
+                  navigateUpKeyAriaLabel: 'Up',
+                  navigateDownKeyAriaLabel: 'Down',
+                  closeText: 'Close',
+                  closeKeyAriaLabel: 'Esc',
+                }
+              }
+            }
+          }
+        },
+    
+        //编辑文章
+        editLink: {
+          pattern: 'https://github.com/FruitJelliesGD/GDDS.ren/tree/main/docs/:path',
+          text: 'Edit this page',
+        },
+    
+        externalLinkIcon: true,
+       
+        appearance: true,
+      },
+    },
+  },
+
   transformHead({ assets }) {
     // 相应地调整正则表达式以匹配字体
     const myFontFile = assets.find(file => /OPPO Sans 4.0.ttf/.test(file))
@@ -28,11 +188,10 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/pictures/icon.ico' }],
   ],
 
-  lang: 'zh-Hans',
-
   title: 'gdds.ren',
+  titleTemplate: '果冻大神',
 
-  description: '果冻大神的领域',
+  description: '果冻大神的网站',
 
   markdown: {
     codeCopyButtonTitle: '点击复制',
