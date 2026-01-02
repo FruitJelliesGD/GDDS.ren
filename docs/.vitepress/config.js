@@ -72,10 +72,17 @@ export default defineConfig({
       { text: 'A梦直播间', link: 'https://live.bilibili.com/12101556' },
 
       {
-        text: '攻略（内含剧透）',
+        text: '守望大冒险',
         items: [
-          { text: '守望大冒险', link: '/gameGuide/swdmxdemo' },
-          { text: '恋与守望', link: '/gameGuide/lyswgl' },
+          { text: 'Demo版攻略', link: '/OverwatchAdventure/DemoGuide' },
+          { text: '技能说明', link: '/OverwatchAdventure/Ability' },
+        ],
+      },
+
+      {
+        text: '恋与守望',
+        items: [
+          { text: '攻略（内含剧透）', link: '/LoveAndOverwatch/Guide' },
         ],
       },
 
@@ -91,12 +98,21 @@ export default defineConfig({
 
     //侧边栏
     sidebar: {
-      '/gameGuide/': [
+      '/OverwatchAdventure/': [
         {
-          text: '游戏攻略',
+          text: '守望大冒险',
           items: [
-            { text: '守望大冒险', link: '/gameGuide/swdmxdemo' },
-            { text: '恋与守望', link: '/gameGuide/lyswgl' },
+            { text: 'Demo版攻略', link: '/OverwatchAdventure/DemoGuide' },
+            { text: '技能说明', link: '/OverwatchAdventure/Ability' },
+          ],
+        },
+      ],
+
+      '/LoveAndOverwatch/': [
+        {
+          text: '恋与守望',
+          items: [
+            { text: '游戏攻略', link: '/LoveAndOverwatch/Guide' },
           ],
         },
       ],
