@@ -32,7 +32,7 @@ export default defineConfig({
 
   title: 'gdds.ren',
 
-  description: '果冻大神的领域',
+  description: '果冻大神',
 
   themeConfig: {
     notFound: {

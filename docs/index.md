@@ -66,7 +66,7 @@ features:
 
 基于 `守望先锋` 游戏背景开发的一款同人 RPG 游戏
 
-::: danger 预计春节正式发布  
+::: danger 还有 <Countdown target="2026-02-14 12:00:00" /> 发布！
 丁蒙涵一生中遇到的男人构成了风花雪月四个字  
 刘念   是忽远忽近捉摸不透的风  
 孔春亭 是美丽盛开香醇扑鼻的花  
@@ -100,6 +100,12 @@ Minsea：[速通恋与守望（真正的和所有人结冰）](https://www.bilib
 福福米：[体验《恋与守望》Guxue线 守望先锋年度巨作！](https://www.bilibili.com/video/BV1Fobhz2E5y/)  
 :::
 
+## 果冻大神是谁
+
+不重要
+
+<VPTeamMembers size="medium" :members="members" />
+
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
 
@@ -121,9 +127,3 @@ const members = [
   },
 ]
 </script>
-
-## 果冻大神是谁
-
-不重要
-
-<VPTeamMembers size="medium" :members="members" />
