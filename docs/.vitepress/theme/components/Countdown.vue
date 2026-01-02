@@ -43,7 +43,7 @@ onUnmounted(() => {
 <template>
   <span class="countdown">
     {{ timeLeft }}
-  </span>
+  </span>   
 </template>
 
 <style scoped>

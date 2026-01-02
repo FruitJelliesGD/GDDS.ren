@@ -6,6 +6,7 @@ import './style/dark.css'
 import layout from './style/layout.vue'
 import './style/fonts.css'
 import Countdown from './components/Countdown.vue'
+import HeroCountdown from './components/HeroCountdown.vue'
 
 // 彩虹背景动画样式
 let homePageStyle: HTMLStyleElement | undefined
@@ -21,6 +22,7 @@ export default {
 
   enhanceApp({ app, router }) {
     app.component('Countdown', Countdown)
+    app.component('HeroCountdown', HeroCountdown)
     // 彩虹背景动画样式
     if (typeof window !== 'undefined') {
       watch(

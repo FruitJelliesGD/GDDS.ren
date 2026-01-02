@@ -1,7 +1,7 @@
   <script setup lang="ts">
-  import { useData } from 'vitepress'
+  import { useData , inBrowser } from 'vitepress'
   import DefaultTheme from 'vitepress/theme'
-  import { nextTick, provide } from 'vue'
+  import { nextTick, provide , watchEffect } from 'vue'
 
   const { isDark } = useData()
 
@@ -34,6 +34,13 @@
         pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`
       }
     )
+  })
+
+  const { lang } = useData()
+  watchEffect(() => {
+    if (inBrowser) {
+     document.cookie = `nf_lang=${lang.value}; expires=Mon, 1 Jan 2030 00:00:00 UTC; path=/`
+    }
   })
   </script>
 
