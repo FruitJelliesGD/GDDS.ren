@@ -55,6 +55,9 @@ export default defineConfig({
             items: [
               { text: 'Demo版攻略', link: '/en/OverwatchAdventure/DemoGuide' },
               { text: '技能说明', link: '/en/OverwatchAdventure/Ability' },
+              { text: '主角团技能介绍', link: '/en/OverwatchAdventure/Ability' },
+              { text: '支线任务', link: '/en/OverwatchAdventure/Side' },
+
             ],
           },
     
@@ -82,7 +85,10 @@ export default defineConfig({
               text: 'Overwatch: Adventure',
               items: [
                 { text: 'Demo版攻略', link: '/en/OverwatchAdventure/DemoGuide' },
-                { text: '技能说明', link: '/en/OverwatchAdventure/Ability' },
+                { text: '技能说明', link: '/en/OverwatchAdventure/Battle' },
+                { text: '主角团技能介绍', link: '/OverwatchAdventure/Ability' },
+                { text: '支线任务', link: '/OverwatchAdventure/Side' },
+
               ],
             },
           ],
@@ -242,6 +248,9 @@ export default defineConfig({
         items: [
           { text: 'Demo版攻略', link: '/OverwatchAdventure/DemoGuide' },
           { text: '战斗相关', link: '/OverwatchAdventure/Battle' },
+          { text: '主角团技能介绍', link: '/OverwatchAdventure/Ability' },
+          { text: '支线任务', link: '/OverwatchAdventure/Side' },
+
         ],
       },
 
@@ -270,6 +279,8 @@ export default defineConfig({
           items: [
             { text: 'Demo版攻略', link: '/OverwatchAdventure/DemoGuide' },
             { text: '战斗相关', link: '/OverwatchAdventure/Battle' },
+            { text: '主角团技能介绍', link: '/OverwatchAdventure/Ability' },
+            { text: '支线任务', link: '/OverwatchAdventure/Side' },
           ],
         },
       ],

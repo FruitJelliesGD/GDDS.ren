@@ -5,13 +5,13 @@ layout: home
 hero:
   name: "果冻大神的"
   text: "艺术圣堂"
-  tagline: 只有四个字，没有五个字
+  tagline: 持续施工中……
   image:
     src: /pictures/swdmx.webp
     alt: 最新作品
   actions:
     - theme: brand
-      text: 游玩守望大冒险
+      text: 游玩守望大冒险Demo版
       link: https://gdds.ren/OverwatchAdventure/
     - theme: alt
       text: B站主页
