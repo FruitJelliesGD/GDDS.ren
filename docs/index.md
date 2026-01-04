@@ -8,7 +8,7 @@ hero:
   tagline: 持续施工中……
   image:
     src: /pictures/swdmx.webp
-    alt: 最新作品
+    alt: 守望先锋周年图标
   actions:
     - theme: brand
       text: 游玩守望大冒险Demo版
