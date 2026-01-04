@@ -1,5 +1,5 @@
 # 全员技能介绍
-## Ameng
+## AMENG
 
 ![](/pictures/OverwatchAdventure/ameng.webp)
 

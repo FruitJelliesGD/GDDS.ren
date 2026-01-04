@@ -17,7 +17,7 @@ hero:
       text: B站主页
       link: https://space.bilibili.com/5871349
     - theme: alt
-      text: 给我压岁钱
+      text: 赞助我
       link: https://afdian.com/a/fruitjellies
     - theme: alt
       text: 游玩恋与守望
