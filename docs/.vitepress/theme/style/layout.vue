@@ -29,7 +29,7 @@
       { opacity: fromTo },
       {
         duration: 500,
-        easing: 'ease-in-out',
+        easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
         fill: 'forwards',
         pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`
       }
