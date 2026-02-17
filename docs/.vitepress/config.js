@@ -83,8 +83,6 @@ export default defineConfig({
 
     //导航栏
     nav: [
-      { text: 'A梦直播间', link: 'https://live.bilibili.com/12101556' },
-
       {
         text: '守望大冒险',
         items: [
@@ -104,10 +102,20 @@ export default defineConfig({
       },
 
       {
+        text: '英雄信息',
+        items: [
+          { text: '重装', link: '/OWiki/tank' },
+          { text: '输出', link: '/OWiki/damage' },
+          { text: '支援', link: '/OWiki/support' },
+        ],
+      },
+
+      {
         text: '直播相关工具',
         items: [
           { text: '在直播间装监控', link: '/liveTools/blap' },
-          { text: 'B站一键分享', link: '/liveTools/bsb' },
+          { text: '更好的分享按钮', link: '/liveTools/bsb' },
+          { text: '固定直播间聊天滚动条', link: '/liveTools/blcsk' },
         ],
       },
 
@@ -141,7 +149,19 @@ export default defineConfig({
           text: '直播工具',
           items: [
             { text: '在直播间装监控', link: '/liveTools/blap' },
-            { text: 'B站一键分享', link: '/liveTools/bsb' },
+            { text: '更好的分享按钮', link: '/liveTools/bsb' },
+            { text: '固定直播间聊天滚动条', link: '/liveTools/blcsk' },
+          ],
+        },
+      ],
+
+      '/OWiki/': [
+        {
+          text: '守望先锋英雄信息',
+          items: [
+            { text: '重装', link: '/OWiki/tank' },
+            { text: '输出', link: '/OWiki/damage' },
+            { text: '支援', link: '/OWiki/support' },
           ],
         },
       ],

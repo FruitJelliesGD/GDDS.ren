@@ -14,14 +14,15 @@ hero:
       text: 游玩守望大冒险Demo版
       link: https://gdds.ren/playOverwatchAdventure/
     - theme: alt
-      text: B站主页
+      text: 游玩恋与守望
+      link: https://www.66rpg.com/game/1687717    
+    - theme: alt
+      text: 我的B站主页
       link: https://space.bilibili.com/5871349
     - theme: alt
       text: 赞助我
       link: https://afdian.com/a/fruitjellies
-    - theme: alt
-      text: 游玩恋与守望
-      link: https://www.66rpg.com/game/1687717
+
 
 features:
   - icon: 🤓

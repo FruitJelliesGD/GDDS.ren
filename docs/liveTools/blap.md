@@ -2,17 +2,20 @@
 ###### <Badge type="tip" text="发行版" />
 #### 直播未开播时自动轮询，检测到开播会自动刷新网页并语音播报  
 
+https://greasyfork.org/zh-CN/scripts/556376-bilibili-live-auto-play  
+
 ## 代码内容
 ````js
 // ==UserScript==
 // @name         Bilibili Live Auto Play
 // @namespace    https://bilibili.com/
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=bilibili.com
-// @version      2025.11.22
-// @description  直播未开播时自动轮询，开播自动刷新并语音播报主播昵称
+// @version      2025.12.31
+// @description  直播未开播时自动轮询状态，开播自动刷新并语音播报主播昵称，时刻监控直播间标题
 // @match        https://live.bilibili.com/*
 // @match        https://live.bilibili.com/blanc/*
 // @grant        GM_xmlhttpRequest
+// @grant        GM_notification
 // @connect      api.live.bilibili.com
 // @connect      api.vc.bilibili.com
 // ==/UserScript==
@@ -20,9 +23,9 @@
 (function () {
     'use strict';
     if (window.top !== window.self) {
-    console.log("【BLAP】检测到 iframe 内部，不执行脚本");
-    return;
-}
+        console.log("【BLAP】检测到 iframe 内部，不执行脚本");
+        return;
+    }
  
     // ---- 提取直播间号 ----
     const match = window.location.pathname.match(/(\d+)$/);
@@ -31,15 +34,14 @@
         return;
     }
     const roomId = match[1];
-    let userName = "未识别到主播名";
+    let userName = "主播";
     const refreshedFlagKey = `bili_live_refreshed_${roomId}`;
  
-    if (sessionStorage.getItem(refreshedFlagKey) === "1") {
-        console.log("【BLAP】刷新后标记已存在，不再继续检测。");
-        return;
-    }
- 
     const apiUrl = `https://api.live.bilibili.com/room/v1/Room/get_info?room_id=${roomId}`;
+ 
+    // 标题监控相关
+    let lastTitle = "";
+    const titleChangedFlagKey = `bili_live_title_changed_${roomId}`;
  
     // ---- 获取 UID ----
     async function fetchUID(roomId) {
@@ -85,12 +87,11 @@
                 try {
                     const data = JSON.parse(res.responseText);
                     const status = data?.data?.live_status; // 0未开播、1直播中、2轮播
- 
                     console.log("【BLAP】当前直播状态:", status);
- 
                     if (status === 1) {
                         console.log("【BLAP】检测到开播，刷新页面并播报！");
                         speak(`${userName} 开播了`);
+                        showNotify(`${userName} 开播了`);
                         sessionStorage.setItem(refreshedFlagKey, "1");
                         location.reload();
                     }
@@ -103,14 +104,103 @@
     }
     let pollingStarted = false;
  
+    // ---- 检查标题变化 ----
+    function checkTitleChange() {
+        GM_xmlhttpRequest({
+            method: "GET",
+            url: apiUrl,
+            onload: (res) => {
+                try {
+                    const json = JSON.parse(res.responseText);
+                    const newTitle = json?.data?.title || "";
+ 
+                    if (newTitle && lastTitle && newTitle !== lastTitle) {
+                        console.log(`【BLAP】检测到标题变化: ${lastTitle} -> ${newTitle}`);
+                        if (sessionStorage.getItem(refreshedFlagKey) !== "1") {
+                            location.reload();
+                        }
+ 
+ 
+                        // 语音播报标题变化
+                        speak(`${userName}更改了新标题：${newTitle}`);
+                        showNotify(`${userName}更改了新标题：${newTitle}`);
+                        // 避免持续重复播报（刷新时 sessionStorage 会重置）
+                        sessionStorage.setItem(titleChangedFlagKey, "1");
+                    }
+ 
+                    lastTitle = newTitle;
+                } catch (e) {
+                    console.error("【BLAP】标题检查解析失败:", e);
+                }
+            },
+            onerror: (err) => console.error("【BLAP】标题检查失败:", err)
+        });
+    }
+ 
+    function showNotify(title = '通知', body = '') {
+        // 首先尝试 GreaseMonkey/Tampermonkey 提供的 GM_notification（可能是函数或对象签名）
+        try {
+            if (typeof GM_notification !== 'undefined') {
+                // 兼容两种常见签名：
+                // 1) GM_notification(text, title, image, onclick)
+                // 2) GM_notification({ text, title, image, timeout, onclick })
+                try {
+                    // 先尝试对象签名（现代 Tampermonkey/GM）
+                    GM_notification({
+                        text: body,
+                        title: title,
+                        timeout: 5000
+                    });
+                    return;
+                } catch (e) {
+                    // 再尝试传统函数签名
+                    try {
+                        GM_notification(body, title);
+                        return;
+                    } catch (e2) {
+                        // 如果都失败，继续走回退
+                    }
+                }
+            }
+        } catch (e) {
+            // 忽略，走浏览器 Notification 回退
+        }
+ 
+        // 回退到浏览器 Notification API
+        try {
+            if (window.Notification) {
+                if (Notification.permission === 'granted') {
+                    new Notification(title, { body });
+                } else if (Notification.permission !== 'denied') {
+                    Notification.requestPermission().then((perm) => {
+                        if (perm === 'granted') new Notification(title, { body });
+                    });
+                } else {
+                    // 被拒绝，无法显示通知
+                    console.warn('Notification blocked by user.');
+                }
+                return;
+            }
+        } catch (e) {
+            console.warn('Notification API not available:', e);
+        }
+ 
+        // 最后兜底：使用 alert（不会推荐，但确保用户至少能看到）
+        try {
+            alert(`${title}\n\n${body}`);
+        } catch (e) {
+            console.error('无法显示任何通知', e);
+        }
+    }
+ 
     // ---- 开始轮询 ----
     function startPolling() {
- 
         setInterval(() => {
-            if (sessionStorage.getItem(refreshedFlagKey) === "1") return;
-            checkLiveStatus();
+            if (sessionStorage.getItem(refreshedFlagKey) !== "1") {
+                checkLiveStatus();
+            }
+            checkTitleChange();
         }, 10000); // 每10秒检查一次
- 
     }
  
     // ---- 初始化流程 ----
@@ -121,22 +211,26 @@
             const data = await res.json();
             const status = data?.data?.live_status;
             console.log("【BLAP】首次检查直播状态:", status);
+            lastTitle = data?.data?.title || "";
+            console.log("【BLAP】初始标题:", lastTitle);
  
             if (status === 1) {
-                console.log("【BLAP】正在直播，无需操作。");
+                console.log("【BLAP】正在直播，开始仅监控标题…");
+                //                startPollingTitle();
+                sessionStorage.setItem(refreshedFlagKey, "1");
+                startPolling();
                 return;
             }
  
             console.log("【BLAP】直播未开播，获取主播信息...");
             const uid = await fetchUID(roomId);
-            console.log("【BLAP】主播 UID:", uid);
  
             if (uid) {
                 userName = await fetchUserName(uid);
-                console.log("【BLAP】主播昵称:", userName);
+                console.log("【BLAP】主播昵称:", userName, "UID:",uid);
             }
  
-            console.log("【BLAP】开始轮询监控开播状态...");
+            console.log("【BLAP】开始轮询监控标题和开播状态…");
             startPolling();
  
         } catch (e) {
