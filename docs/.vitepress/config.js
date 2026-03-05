@@ -86,7 +86,7 @@ export default defineConfig({
       {
         text: '守望大冒险',
         items: [
-          { text: 'Demo版攻略', link: '/OverwatchAdventure/DemoGuide' },
+          { text: '游戏攻略', link: '/OverwatchAdventure/Guide' },
           { text: '战斗相关', link: '/OverwatchAdventure/Battle' },
           { text: '主角团技能介绍', link: '/OverwatchAdventure/Ability' },
           { text: '支线任务', link: '/OverwatchAdventure/Side' },
@@ -101,14 +101,13 @@ export default defineConfig({
         ],
       },
 
-      {
-        text: '英雄信息',
-        items: [
-          { text: '重装', link: '/OWiki/tank' },
-          { text: '输出', link: '/OWiki/damage' },
-          { text: '支援', link: '/OWiki/support' },
-        ],
-      },
+      //{
+      //text: '英雄信息',
+      //items: [
+      //  { text: '重装', link: '/OWiki/tank' },
+      //  { text: '输出', link: '/OWiki/damage' },
+      //  { text: '支援', link: '/OWiki/support' },
+      //],
 
       {
         text: '直播相关工具',
@@ -127,7 +126,7 @@ export default defineConfig({
         {
           text: '守望大冒险',
           items: [
-            { text: 'Demo版攻略', link: '/OverwatchAdventure/DemoGuide' },
+            { text: '游戏攻略', link: '/OverwatchAdventure/Guide' },
             { text: '战斗相关', link: '/OverwatchAdventure/Battle' },
             { text: '主角团技能介绍', link: '/OverwatchAdventure/Ability' },
             { text: '支线任务', link: '/OverwatchAdventure/Side' },
