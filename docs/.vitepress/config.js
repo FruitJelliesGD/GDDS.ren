@@ -88,7 +88,7 @@ export default defineConfig({
         items: [
           { text: '游戏攻略', link: '/OverwatchAdventure/Guide' },
           { text: '战斗相关', link: '/OverwatchAdventure/Battle' },
-          { text: '主角团技能介绍', link: '/OverwatchAdventure/Ability' },
+          { text: '技能介绍', link: '/OverwatchAdventure/Ability' },
           { text: '支线任务', link: '/OverwatchAdventure/Side' },
           { text: '关键道具', link: '/OverwatchAdventure/Item' },
         ],
@@ -114,7 +114,7 @@ export default defineConfig({
         items: [
           { text: '在直播间装监控', link: '/liveTools/blap' },
           { text: '更好的分享按钮', link: '/liveTools/bsb' },
-          { text: '固定直播间聊天滚动条', link: '/liveTools/blcsk' },
+          { text: '固定聊天滚动条', link: '/liveTools/blcsk' },
         ],
       },
 
@@ -128,7 +128,7 @@ export default defineConfig({
           items: [
             { text: '游戏攻略', link: '/OverwatchAdventure/Guide' },
             { text: '战斗相关', link: '/OverwatchAdventure/Battle' },
-            { text: '主角团技能介绍', link: '/OverwatchAdventure/Ability' },
+            { text: '技能介绍', link: '/OverwatchAdventure/Ability' },
             { text: '支线任务', link: '/OverwatchAdventure/Side' },
             { text: '关键道具', link: '/OverwatchAdventure/Item' },
           ],
@@ -150,7 +150,7 @@ export default defineConfig({
           items: [
             { text: '在直播间装监控', link: '/liveTools/blap' },
             { text: '更好的分享按钮', link: '/liveTools/bsb' },
-            { text: '固定直播间聊天滚动条', link: '/liveTools/blcsk' },
+            { text: '固定聊天滚动条', link: '/liveTools/blcsk' },
           ],
         },
       ],
