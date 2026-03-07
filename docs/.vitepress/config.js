@@ -90,7 +90,7 @@ export default defineConfig({
           { text: '战斗相关', link: '/OverwatchAdventure/Battle' },
           { text: '主角团技能介绍', link: '/OverwatchAdventure/Ability' },
           { text: '支线任务', link: '/OverwatchAdventure/Side' },
-
+          { text: '关键道具', link: '/OverwatchAdventure/Item' },
         ],
       },
 
@@ -130,6 +130,7 @@ export default defineConfig({
             { text: '战斗相关', link: '/OverwatchAdventure/Battle' },
             { text: '主角团技能介绍', link: '/OverwatchAdventure/Ability' },
             { text: '支线任务', link: '/OverwatchAdventure/Side' },
+            { text: '关键道具', link: '/OverwatchAdventure/Item' },
           ],
         },
       ],
@@ -210,10 +211,10 @@ export default defineConfig({
     },
 
     //编辑文章
-    editLink: {
-      pattern: 'https://github.com/FruitJelliesGD/GDDS.ren/tree/main/docs/:path',
-      text: '编辑此页',
-    },
+    //editLink: {
+    //  pattern: 'https://github.com/FruitJelliesGD/GDDS.ren/tree/main/docs/:path',
+    //  text: '编辑此页',
+    //},
 
     externalLinkIcon: true,
 
