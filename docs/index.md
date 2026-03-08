@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "果冻大神的"
   text: "艺术圣堂"
-  tagline: 持续施工中……
+  tagline: 你怎么知道恋与守望今年出第二部…
   image:
     src: /pictures/swdmx.webp
     alt: 守望先锋周年图标
@@ -65,7 +65,7 @@ features:
 
 ## 守望大冒险
 
-#### 基于 `守望先锋` 游戏背景开发的一款同人 RPG 游戏
+#### 基于 `守望先锋` 游戏背景开发的一款同人 RPG 游戏 · [离线版下载](/OverwatchAdventure/Download) · [在线版游玩](https://gdds.ren/playOverwatchAdventure/)
 
 ::: tip 剧情简介
 Ameng、Kyo、Jinmu、Lengsa因一个共同的梦境而决定共同踏上冒险旅程，寻找守望之神，却不想真实的守望之神并非他们推理出的Leave。

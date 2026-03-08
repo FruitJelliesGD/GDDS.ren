@@ -1,5 +1,5 @@
 # 《守望大冒险》关键道具
-##### <Badge type="tip" text="发行版" />
+##### <Badge type="tip" text="发行版" />  
 
 ## KYO：`新舰长`
 
