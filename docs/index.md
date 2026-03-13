@@ -21,8 +21,7 @@ hero:
       link: https://space.bilibili.com/5871349
     - theme: alt
       text: 赞助我
-      link: https://afdian.com/a/fruitjellies
-
+      link: http://fadian.gdds.ren
 
 features:
   - icon: 🤓
