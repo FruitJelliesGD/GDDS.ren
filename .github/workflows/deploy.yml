@@ -45,3 +45,36 @@ jobs:
 
           # 4. 远程解压到目标目录
           ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} 'powershell -Command "Expand-Archive -Path C:\Windows\Temp\deploy\deploy.zip -DestinationPath C:\Users\Administrator\Desktop\nginx-1.28.0\html -Force; Remove-Item -Path C:\Windows\Temp\deploy -Recurse -Force"'
+
+      - name: Setup Python (for CDN refresh)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Alibaba Cloud CDN SDK
+        run: |
+          pip install alibabacloud-cdn20180510
+          pip install alibabacloud-tea-utils
+
+      - name: Refresh CDN cache
+        env:
+          ACCESS_KEY_ID: ${{ secrets.ALIYUN_ACCESS_KEY_ID }}
+          ACCESS_KEY_SECRET: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
+          CDN_URL: 'https://gdds.ren/'
+        run: |
+          python3 - <<EOF
+          from alibabacloud_cdn20180510 import *
+          from alibabacloud_tea_openapi import models as open_api_models
+          from alibabacloud_tea_util import models as util_models
+
+          config = open_api_models.Config(
+              access_key_id='${ACCESS_KEY_ID}',
+              access_key_secret='${ACCESS_KEY_SECRET}'
+          )
+          client = CdnClient(config)
+          request = RefreshCachesRequest(
+              object_paths=[f"${CDN_URL}"]  # URL 刷新，单个文件或根路径
+          )
+          response = client.refresh_caches(request)
+          print("CDN refresh completed:", response.body)
+          EOF
