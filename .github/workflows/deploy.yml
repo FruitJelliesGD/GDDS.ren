@@ -44,10 +44,4 @@ jobs:
           scp docs/.vitepress/deploy.zip ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:"C:/Windows/Temp/deploy/deploy.zip"
 
           # 4. 远程解压到目标目录
-          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "powershell -Command \"
-          \$target = '${{ secrets.SERVER_TARGET_PATH }}';
-          if (\$target -notmatch '\\$') { \$target = \$target + '\\' };
-          Add-Type -AssemblyName System.IO.Compression.FileSystem;
-          [System.IO.Compression.ZipFile]::ExtractToDirectory('C:\Windows\Temp\deploy\deploy.zip', \$target, \$true);
-          Remove-Item -Path C:\Windows\Temp\deploy -Recurse -Force
-          \""
+          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} 'powershell -Command "Expand-Archive -Path C:\Windows\Temp\deploy\deploy.zip -DestinationPath C:\Users\Administrator\Desktop\nginx-1.28.0\html -Force; Remove-Item -Path C:\Windows\Temp\deploy -Recurse -Force"'
