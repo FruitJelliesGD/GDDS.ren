@@ -37,14 +37,11 @@ jobs:
           zip -r ../deploy.zip *
           cd ../../..
 
-          # 2. 确保服务器上存在临时目录（使用系统临时目录，更安全）
-          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "New-Item -ItemType Directory -Force -Path C:\Windows\Temp\deploy"
+          # 2. 建立临时目录
+          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} 'powershell -Command "New-Item -ItemType Directory -Force -Path C:\Windows\Temp\deploy"'
 
           # 3. 上传 zip 到服务器临时目录
           scp docs/.vitepress/deploy.zip ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:"C:/Windows/Temp/deploy/deploy.zip"
 
           # 4. 远程解压到目标目录
-          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} @"
-          Expand-Archive -Path C:\Windows\Temp\deploy\deploy.zip -DestinationPath \"${{ secrets.SERVER_TARGET_PATH }}\" -Force;
-          Remove-Item -Path C:\Windows\Temp\deploy -Recurse -Force
-          "@
+          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} 'powershell -Command "Expand-Archive -Path C:\Windows\Temp\deploy\deploy.zip -DestinationPath \"${{ secrets.SERVER_TARGET_PATH }}\" -Force; Remove-Item -Path C:\Windows\Temp\deploy -Recurse -Force"'
