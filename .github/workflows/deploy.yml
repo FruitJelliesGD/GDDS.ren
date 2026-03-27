@@ -26,11 +26,11 @@ jobs:
         run: npm run docs:build
 
       - name: Deploy via SCP
-        uses: gase/copy-file-to-ssh-server@v1
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          private_key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "docs/.vitepress/dist/"
-          target: ${{ secrets.SERVER_TARGET_PATH }}
-          recursive: true
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SERVER_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          
+          ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+          
+          scp -r docs/.vitepress/dist/* ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:"${{ secrets.SERVER_TARGET_PATH }}"
