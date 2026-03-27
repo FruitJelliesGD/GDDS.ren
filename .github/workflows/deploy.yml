@@ -52,9 +52,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install Alibaba Cloud CDN SDK
-        run: |
-          pip install alibabacloud-cdn20180510
-          pip install alibabacloud-tea-utils
+        run: pip install alibabacloud-cdn20180510
 
       - name: Refresh CDN cache
         env:
@@ -73,7 +71,7 @@ jobs:
           )
           client = CdnClient(config)
           request = RefreshCachesRequest(
-              object_paths=[f"${CDN_URL}"]  # URL 刷新，单个文件或根路径
+              object_paths=[f"${CDN_URL}"]
           )
           response = client.refresh_caches(request)
           print("CDN refresh completed:", response.body)
