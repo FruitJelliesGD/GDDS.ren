@@ -61,17 +61,18 @@ jobs:
           CDN_URL: 'https://gdds.ren/'
         run: |
           python3 - <<EOF
-          from alibabacloud_cdn20180510 import *
+          from alibabacloud_cdn20180510.client import Client as CdnClient
+          from alibabacloud_cdn20180510 import models
           from alibabacloud_tea_openapi import models as open_api_models
-          from alibabacloud_tea_util import models as util_models
 
           config = open_api_models.Config(
               access_key_id='${ACCESS_KEY_ID}',
               access_key_secret='${ACCESS_KEY_SECRET}'
           )
           client = CdnClient(config)
-          request = RefreshCachesRequest(
-              object_paths=[f"${CDN_URL}"]
+          request = models.RefreshCachesRequest(
+              object_paths=[f"${CDN_URL}"],
+              # URL 刷新：不设置 dirs=True
           )
           response = client.refresh_caches(request)
           print("CDN refresh completed:", response.body)
