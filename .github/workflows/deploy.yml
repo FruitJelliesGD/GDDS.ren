@@ -62,18 +62,21 @@ jobs:
         run: |
           python3 - <<EOF
           from alibabacloud_cdn20180510.client import Client as CdnClient
-          from alibabacloud_cdn20180510 import models
+          from alibabacloud_cdn20180510 import models as cdn_models
           from alibabacloud_tea_openapi import models as open_api_models
+          from alibabacloud_tea_util import models as util_models
 
           config = open_api_models.Config(
               access_key_id='${ACCESS_KEY_ID}',
               access_key_secret='${ACCESS_KEY_SECRET}'
           )
           client = CdnClient(config)
-          request = models.RefreshCachesRequest(
-              object_paths=[f"${CDN_URL}"],
-              # URL 刷新：不设置 dirs=True
-          )
-          response = client.refresh_caches(request)
-          print("CDN refresh completed:", response.body)
+
+          request = cdn_models.RefreshObjectCachesRequest()
+          request.object_path = '${CDN_URL}'
+          request.object_type = 'Directory'
+
+          runtime = util_models.RuntimeOptions()
+          response = client.refresh_object_caches_with_options(request, runtime)
+          print("CDN refresh completed. Task ID:", response.body.refresh_task_id)
           EOF
