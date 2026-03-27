@@ -25,10 +25,27 @@ jobs:
       - name: Build VitePress site
         run: npm run docs:build
 
-      - name: Deploy via SCP
+      - name: Deploy via SSH + PowerShell
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SERVER_SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
-          scp -r docs/.vitepress/dist/* ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:"${{ secrets.SERVER_TARGET_PATH }}"
+
+          # 1. 将构建产物打包为 zip
+          cd docs/.vitepress/dist
+          zip -r ../deploy.zip *
+          cd ../../..
+
+          # 2. 将 zip 包传输到服务器的临时目录
+          scp docs/.vitepress/deploy.zip ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:"C:/Temp/deploy.zip"
+
+          # 3. 通过 SSH 执行 PowerShell 命令解压并覆盖目标目录
+          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} @"
+          # 确保临时目录存在
+          New-Item -ItemType Directory -Force -Path C:\Temp
+          # 解压 zip 到目标目录，覆盖现有文件
+          Expand-Archive -Path C:\Temp\deploy.zip -DestinationPath "${{ secrets.SERVER_TARGET_PATH }}" -Force
+          # 清理临时文件
+          Remove-Item C:\Temp\deploy.zip -Force
+          "@
