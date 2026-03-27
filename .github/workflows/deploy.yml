@@ -34,4 +34,4 @@ jobs:
           source: "docs/.vitepress/dist/*"
           target: ${{ secrets.SERVER_TARGET_PATH }}
           strip_components: 3
-          tar_exec: "C:/Program Files/Git/usr/bin/tar.exe"
+          tar_exec: "C:/Windows/system32/tar.exe"
