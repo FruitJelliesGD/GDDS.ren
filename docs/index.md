@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "果冻大神的"
   text: "艺术圣堂"
-  tagline: 你怎么知道恋与守望今年出第二部…
+  tagline: ……
   image:
     src: /pictures/swdmx.webp
     alt: 守望先锋周年图标
